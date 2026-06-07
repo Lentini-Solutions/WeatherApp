@@ -83,6 +83,25 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
+
+    //Test Library additional -- Mockito
+    testImplementation(libs.mockito.kotlin)
+
+    // Source: https://mvnrepository.com/artifact/org.mockito/mockito-inline
+    testImplementation(libs.mockito.inline)
+
+    //coroutines test
+    testImplementation(libs.kotlinx.coroutines.test)
+
+    // Koin Test features
+    testImplementation(libs.koin.test)
+    // Koin for JUnit 4
+    testImplementation(libs.koin.test.junit4)
+
+    //Mockk
+    testImplementation(libs.mockk)
+
+
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     debugImplementation(libs.androidx.compose.ui.tooling)
 }

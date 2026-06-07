@@ -17,9 +17,7 @@ class DataSource(private val rdb: RemoteDatabase,
         ) -> Unit
     ) = ldb.getAllCities { onResult(it) }
 
-    suspend fun searchWeatherByName(
-        name: String, onResult: (WeatherCity?) -> Unit
-    ) =
+    suspend fun searchWeatherByName(name: String, onResult: (WeatherCity?) -> Unit) =
         rdb.searchWeatherByName(name) { onResult(it) }
 
     suspend fun addWeatherAndCity(weatherCity: WeatherCity, onResult: (Boolean) -> Unit) =
