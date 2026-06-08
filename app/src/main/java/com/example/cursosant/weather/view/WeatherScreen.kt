@@ -33,7 +33,6 @@ import androidx.compose.ui.text.style.TextAlign
 import com.example.cursosant.R
 import com.example.cursosant.common.entities.Location
 import com.example.cursosant.common.entities.WeatherCity
-import com.example.cursosant.common.fakedata.getAllCitiesPreview
 import com.example.cursosant.components.AntCoilImage
 import com.example.cursosant.components.AntDropDownMenu
 import com.example.cursosant.components.AntProgressFullScreen
@@ -83,7 +82,8 @@ private fun WeatherInfoView(weatherCity: WeatherCity){
         )
 
         Text(
-            text = if(weatherCity.name.isEmpty()) "" else "${weatherCity.component5()} km/h",
+            text = if(weatherCity.name.isEmpty()) ""
+            else "${weatherCity.component5()} ${weatherCity.component3()} km/h",
             style = Typography.bodyLarge
         )
     }
